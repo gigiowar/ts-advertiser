@@ -4,7 +4,7 @@ This project is a example to how to use Typescript to make a basic video adverti
 
 ## Instructions to view the page:
 
-1. Clone or download the entire project (https://github.com/gigiowar/ts-advertiser.git)
+1. Clone or download the entire project (git clone https://github.com/gigiowar/ts-advertiser.git)
 2. Access the index.html for view the page
 3. Dont forget to open the dev tools of your browser to see the console messages.
 

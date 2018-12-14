@@ -3,19 +3,11 @@ export class Advertiser {
 
     constructor() {
         this.type = ''
-    }
-
-    isEmpty(obj) {
-        for(var key in obj) {
-            if(obj.hasOwnProperty(key))
-                return false;
-        }
-        return true;
-    }    
+    } 
 
     isScrolledIntoView( video ) {
 
-        if(!this.isEmpty(video)) {
+        if(video) {
             const elementTop    = video.getBoundingClientRect().top,
                 elementBottom = video.getBoundingClientRect().bottom;
 
@@ -24,18 +16,15 @@ export class Advertiser {
                 elementBottomBound = -Math.abs(elementHalfHeight);
 
 
-            return elementTop >= elementBottomBound && elementBottom <= window.innerHeight + elementHalfHeight;            
+            return elementTop >= elementBottomBound && elementBottom <= window.innerHeight + elementHalfHeight; 
         } else {
             return false;
         }
-
-
     }
 
     initTimeEvents( video ) {
 
-        if(!this.isEmpty(video)) {
-
+        if(video) {
             let watched_25 = false;
             let watched_50 = false;
             let watched_75 = false;
@@ -63,10 +52,10 @@ export class Advertiser {
                 watched_100 = true;
                 return true;
             } 
-
         } else {
-            return false;
-        }    
+            return false;            
+        }
+  
     }
 
  

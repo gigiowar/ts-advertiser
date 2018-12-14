@@ -4,11 +4,11 @@ import {expect} from 'chai'
 describe('advertiser', () => {
     it('should return false on call isScrolledIntoView without parameter', () =>{
         let advertiser = new Advertiser()
-        expect(advertiser.isScrolledIntoView({})).to.equal(false)
+        expect(advertiser.isScrolledIntoView(false)).to.equal(false)
     })
 
     it('should return false on call initTimeEvents without parameter', () =>{
         let advertiser = new Advertiser()
-        expect(advertiser.initTimeEvents({})).to.equal(false)
+        expect(advertiser.initTimeEvents(false)).to.equal(false)
     })    
 })

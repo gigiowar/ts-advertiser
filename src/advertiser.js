@@ -4,15 +4,8 @@ var Advertiser = /** @class */ (function () {
     function Advertiser() {
         this.type = '';
     }
-    Advertiser.prototype.isEmpty = function (obj) {
-        for (var key in obj) {
-            if (obj.hasOwnProperty(key))
-                return false;
-        }
-        return true;
-    };
     Advertiser.prototype.isScrolledIntoView = function (video) {
-        if (!this.isEmpty(video)) {
+        if (video) {
             var elementTop = video.getBoundingClientRect().top, elementBottom = video.getBoundingClientRect().bottom;
             var elementHeight = video.getBoundingClientRect().height, elementHalfHeight = elementHeight / 2, elementBottomBound = -Math.abs(elementHalfHeight);
             return elementTop >= elementBottomBound && elementBottom <= window.innerHeight + elementHalfHeight;
@@ -22,7 +15,7 @@ var Advertiser = /** @class */ (function () {
         }
     };
     Advertiser.prototype.initTimeEvents = function (video) {
-        if (!this.isEmpty(video)) {
+        if (video) {
             var watched_25 = false;
             var watched_50 = false;
             var watched_75 = false;

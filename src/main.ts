@@ -10,7 +10,7 @@ window.addEventListener("scroll", () => {
         video.play();
     }
     else {
-        video.pause()
+        video.pause();
     }
 });
 

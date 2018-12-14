@@ -1,10 +1,10 @@
 import {Advertiser} from '../src/advertiser';
 
-// const video = document.getElementById("video");
-const video: HTMLMediaElement = document.getElementById("video");
+const video: HTMLMediaElement = document.getElementById('video');
 let advertiser = new Advertiser(); 
+let videoStarted = 0;
 
-window.addEventListener("scroll", () => {
+window.addEventListener('scroll', () => {
 
     if (advertiser.isScrolledIntoView(video)) {
         video.play();
@@ -15,5 +15,11 @@ window.addEventListener("scroll", () => {
 });
 
 video.addEventListener('loadeddata', () => {
-    video.ontimeupdate = () => {advertiser.initTimeEvents(video)};
-});    
+    let arrTime = [];
+    video.ontimeupdate = () => {advertiser.initTimeEvents(video, arrTime)};
+});   
+
+video.addEventListener('playing', () => {
+    videoStarted ++;
+    advertiser.startVideo(videoStarted);
+});   

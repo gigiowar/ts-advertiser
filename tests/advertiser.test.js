@@ -9,6 +9,10 @@ describe('advertiser', function () {
     });
     it('should return false on call initTimeEvents without parameter', function () {
         var advertiser = new advertiser_1.Advertiser();
-        chai_1.expect(advertiser.initTimeEvents(false)).to.equal(false);
+        chai_1.expect(advertiser.initTimeEvents(false, [])).to.equal(false);
+    });
+    it('should return true on call startVideo', function () {
+        var advertiser = new advertiser_1.Advertiser();
+        chai_1.expect(advertiser.startVideo(1)).to.equal(true);
     });
 });

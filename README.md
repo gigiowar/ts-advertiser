@@ -21,6 +21,7 @@ Tests Suite:
 
 1. Install typescript compiler (https://www.typescriptlang.org/)
 2. Inside the project folder(root folder) in a command line, run "npm install"
+3. Compile Typescript files running command "tsc"
 3. To run the tests scripts execute the command "npm test"
 4. For generate a deploy files, just run browserify from root folder "browserify src/main.js -o dist/js/bundle.js"
 
